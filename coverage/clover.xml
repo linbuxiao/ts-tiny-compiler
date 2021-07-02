@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1625191285799" clover="3.2.0">
+  <project timestamp="1625191285799" name="All files">
+    <metrics statements="45" coveredstatements="45" conditionals="16" coveredconditionals="16" methods="1" coveredmethods="1" elements="62" coveredelements="62" complexity="0" loc="45" ncloc="45" packages="1" files="1" classes="1"/>
+    <file name="tokenizer.ts" path="D:\test\mini-babel\src\tokenizer.ts">
+      <metrics statements="45" coveredstatements="45" conditionals="16" coveredconditionals="16" methods="1" coveredmethods="1"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="13" count="2" type="stmt"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="16" count="14" type="stmt"/>
+      <line num="18" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="24" count="2" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="28" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="35" count="2" type="stmt"/>
+      <line num="38" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="39" count="4" type="stmt"/>
+      <line num="40" count="4" type="stmt"/>
+      <line num="43" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="45" count="3" type="stmt"/>
+      <line num="46" count="3" type="stmt"/>
+      <line num="47" count="3" type="stmt"/>
+      <line num="48" count="3" type="stmt"/>
+      <line num="50" count="3" type="stmt"/>
+      <line num="54" count="3" type="stmt"/>
+      <line num="57" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="60" count="1" type="cond" truecount="2" falsecount="0"/>
+      <line num="61" count="3" type="stmt"/>
+      <line num="62" count="3" type="stmt"/>
+      <line num="64" count="1" type="stmt"/>
+      <line num="65" count="1" type="stmt"/>
+      <line num="69" count="1" type="stmt"/>
+      <line num="72" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="73" count="1" type="stmt"/>
+      <line num="74" count="1" type="stmt"/>
+      <line num="75" count="8" type="stmt"/>
+      <line num="76" count="8" type="stmt"/>
+      <line num="78" count="1" type="stmt"/>
+      <line num="82" count="1" type="stmt"/>
+      <line num="85" count="1" type="stmt"/>
+      <line num="88" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

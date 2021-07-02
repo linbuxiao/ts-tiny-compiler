@@ -1,0 +1,55 @@
+{
+  "name": "mini-babel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "^/@(.*)$": "<rootDir>/src$1"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts}"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    }
+  },
+  "prettier": {
+    "Semicolons": false
+  },
+  "lint-staged": {
+    "{src, test}/**/*.ts": [
+      "prettier -w"
+    ]
+  },
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.14.0",
+    "jest": "^27.0.6",
+    "jest-config": "^27.0.6",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "husky": "^7.0.0"
+  }
+}
