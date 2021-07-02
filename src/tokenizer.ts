@@ -1,7 +1,7 @@
 /**
  * 这里tokenizer主要是将输入的语法糖转换成tokens结构{type: 'type', value: 'value'}
  */
-
+import type { tokensType } from "../types";
 const input = "(add 2 (subtract 4 2))";
 
 const WIHITE_SPACE_REG = /\s/;
@@ -10,8 +10,7 @@ const LETTERS = /[a-z]/i;
 
 export default function tokenizer(input: string) {
   let current = 0;
-  let token: { type: "paren" | "number" | "string" | "name"; value: string }[] =
-    [];
+  let token: tokensType = [];
 
   while (current < input.length) {
     let char = input[current];
