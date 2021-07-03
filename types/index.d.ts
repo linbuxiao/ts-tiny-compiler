@@ -8,14 +8,14 @@ export type tokenType = {
 }
 
 export type Visitor= Partial<{
-  Program?: BindExitAndEnter<Program>,
-  CallExpression?: BindExitAndEnter<CallExpression>,
-  NumberLiteral?: BindExitAndEnter<NumberLiteral>,
-  StringLiteral?: BindExitAndEnter<StringLiteral>,
+  Program?: BindExitAndEnter<Ast.Program>,
+  CallExpression?: BindExitAndEnter<Ast.CallExpression>,
+  NumberLiteral?: BindExitAndEnter<Ast.NumberLiteral>,
+  StringLiteral?: BindExitAndEnter<Ast.StringLiteral>,
 }>
 
 interface BindExitAndEnter<T>{
-  enter?: (node: T, parent:withContextTypes) => void
-  exit?: (node: T, parent: withContextTypes) => void 
+  enter?: (node: T, parent: Ast.ParentTypes) => void
+  exit?: (node: T, parent: Ast.ParentTypes) => void 
 } 
 

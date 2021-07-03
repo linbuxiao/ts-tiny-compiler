@@ -54,7 +54,7 @@ export default function transformer(ast: Ast.Program) {
           };
         }
 
-        parent?._context.push(expression);
+        parent?._context?.push(expression);
       },
     },
   });
