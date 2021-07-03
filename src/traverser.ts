@@ -1,23 +1,17 @@
-import type {
-  TypesWithProgram,
-  Visitor,
-  Types,
-  Program,
-  ParentTypes,
-} from "../types";
+import type { Visitor } from "../types";
 
 /**
  * traverser方法主要是对旧ast进行遍历，根据相应的type执行visitor传过来的enter方法
  */
-export default function traverser(ast: Program, visitor: Visitor) {
+export default function traverser(ast: Ast.Program, visitor: Visitor) {
   // 对array数组依次执行traversNode方法
-  function traverseArray(array: Array<Types>, parent: ParentTypes) {
+  function traverseArray(array: Array<Ast.Types>, parent: Ast.ParentTypes) {
     array.forEach((child) => {
       traverseNode(child, parent);
     });
   }
 
-  function traverseNode(node: TypesWithProgram, parent: ParentTypes) {
+  function traverseNode(node: Ast.TypesWithProgram, parent: Ast.ParentTypes) {
     // method主要获取visitor对应type的方法
     let methods = visitor[node.type];
 

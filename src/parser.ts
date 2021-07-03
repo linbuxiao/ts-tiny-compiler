@@ -1,13 +1,7 @@
 /**
  * parser它的主要功能是将tokens转换成ast结构
  */
-import type {
-  tokensType,
-  CallExpression,
-  Program,
-  StringLiteral,
-  NumberLiteral,
-} from "../types";
+import type { tokensType } from "../types";
 
 export default function parser(tokens: tokensType) {
   let current = 0;
@@ -21,7 +15,7 @@ export default function parser(tokens: tokensType) {
       return {
         type: "NumberLiteral",
         value: token.value,
-      } as NumberLiteral;
+      } as Ast.NumberLiteral;
     }
 
     if (token.type === "string") {
@@ -30,13 +24,13 @@ export default function parser(tokens: tokensType) {
       return {
         type: "StringLiteral",
         value: token.value,
-      } as StringLiteral;
+      } as Ast.StringLiteral;
     }
 
     if (token.type == "paren" && token.value === "(") {
       token = tokens[++current];
 
-      let node: CallExpression = {
+      let node: Ast.CallExpression = {
         type: "CallExpression",
         name: token.value,
         params: [],
@@ -58,7 +52,7 @@ export default function parser(tokens: tokensType) {
     throw new TypeError(token.type);
   }
 
-  let ast: Program = {
+  let ast: Ast.Program = {
     type: "Program",
     body: [],
   };

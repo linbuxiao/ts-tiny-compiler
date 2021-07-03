@@ -1,8 +1,7 @@
-import { Program, ParentTypes } from "../types";
 import traverser from "./traverser";
 
-export default function transformer(ast: Program) {
-  let newAst: Program = {
+export default function transformer(ast: Ast.Program) {
+  let newAst: Ast.Program = {
     type: "Program",
     body: [],
   };
@@ -14,7 +13,7 @@ export default function transformer(ast: Program) {
 
   traverser(instance, {
     NumberLiteral: {
-      enter(node, parent: ParentTypes) {
+      enter(node, parent: Ast.ParentTypes) {
         parent?._context?.push({
           type: "NumberLiteral",
           value: node.value,
